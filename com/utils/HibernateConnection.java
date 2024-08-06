@@ -1,10 +1,10 @@
-package utils;
+package com.utils;
 
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 /**
 * <p>
 * This class is responsible for configuring and providing access to
@@ -23,9 +23,7 @@ public class HibernateConnection {
             try {
                 factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
             } catch (HibernateException e) {
-				e.printStackTrace();
-                System.out.println("Failed to connect to SessionFactory --> " + e.getMessage());
-                e.printStackTrace();
+                System.out.println("Failed to connect to SessionFactory");
             }
         }
         return factory;

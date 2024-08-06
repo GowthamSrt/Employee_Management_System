@@ -1,20 +1,12 @@
 package com.department.dao;
 
-import com.model.Department;
-import com.model.Employee;
-import exception.DatabaseException;
-
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
-import utils.DatabaseConnection;
+
+import com.model.Department;
+import com.model.Employee;
+import com.exception.DatabaseException;
 
 public interface DepartmentRepository {
    /**

@@ -14,9 +14,8 @@ import org.hibernate.Hibernate;
 import com.model.Project;
 import com.model.Employee;
 import com.model.Department;
-import exception.DatabaseException;
-import utils.DatabaseConnection;
-import utils.HibernateConnection;
+import com.exception.DatabaseException;
+import com.utils.HibernateConnection;
 
 
 /**
@@ -102,7 +101,7 @@ public class ProjectRepositoryImpl implements ProjectRepository {
         } catch (HibernateException e) {
              throw new DatabaseException ("No project found  " + id);
         }  finally {
-            DatabaseConnection.closeConnection();
+            session.close();
         } 
     }
 

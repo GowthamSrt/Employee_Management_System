@@ -7,7 +7,7 @@ import com.model.Department;
 import com.model.Employee;
 import com.employee.service.EmployeeService;
 import com.department.service.DepartmentService;
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 
 /**
 * <p>
@@ -83,7 +83,9 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     /**
+	 * <p>
      * Finds employees by department ID.
+	 * </p>
      * @param Id - deparmnetID of the department.
      * @return list employee.
      */

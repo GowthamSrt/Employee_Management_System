@@ -6,7 +6,7 @@ import java.util.List;
 import com.project.dao.ProjectRepositoryImpl;
 import com.model.Project;
 import com.project.service.ProjectServiceImpl;
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 
 /**
  * <p>

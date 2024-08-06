@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import com.model.Department;
 import com.model.Employee;
 import com.model.Project;
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 
 /**
  *<p>

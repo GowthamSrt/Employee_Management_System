@@ -1,13 +1,16 @@
 package com.project.controller;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.model.Employee;
 import com.model.Project;
 import com.project.service.ProjectService;
 import com.project.service.ProjectServiceImpl;
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 
 
 /**
@@ -18,7 +21,8 @@ import exception.DatabaseException;
 */
 public class ProjectController {
     private ProjectService projectService = new ProjectServiceImpl();
-    private static int idCounter = 1; //Set the Id and increment the counter for auto increment Ids
+    private static int idCounter = 1;
+    private static final Logger logger = LogManager.getLogger(ProjectController.class);
     private Scanner scanner = new Scanner(System.in);
 
 
@@ -26,50 +30,54 @@ public class ProjectController {
      * Displays the menu for project managemnt and processes user input.
      */
     public void displayProjectManagement() {
-        while (true) {
-            System.out.println("Project Management");
-            System.out.println("------------------------------");
-            System.out.println("1) Add Project");
-            System.out.println("2) Delete Project");
-            System.out.println("3) Display All Projects");
-            System.out.println("4) Display Project by ID");
-            System.out.println("5) Update Project");
-			System.out.println("6) Delete Project");
-            System.out.println("7) Display Employees In Project");
-            System.out.println("8) Back to Main Menu");
-            System.out.println("------------------------------");
-            System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+		try {
+			while (true) {
+				System.out.println("Project Management");
+				System.out.println("------------------------------");
+				System.out.println("1) Add Project");
+				System.out.println("2) Delete Project");
+				System.out.println("3) Display All Projects");
+				System.out.println("4) Display Project by ID");
+				System.out.println("5) Update Project");
+				System.out.println("6) Delete Project");
+				System.out.println("7) Display Employees In Project");
+				System.out.println("8) Back to Main Menu");
+				System.out.println("------------------------------");
+				System.out.print("Enter your choice: ");
+				int choice = scanner.nextInt();
+				scanner.nextLine();
 
-            switch (choice) {
-                case 1:
-                    createProject();
-                    break;
-                case 2:
-                    deleteProject();
-                    break;
-                case 3:
-                    displayAllProjects();
-                    break;
-                case 4:
-                    displayProjectById();
-                    break;
-                case 5:
-                    updateProject();
-                    break;
-				case 6:
-				    deleteProject();
-					break;
-                case 7:
-                    displayEmployeesInProject();
-                    break;
-                case 8:
-                    return;
-                default:
-                    System.out.println("Invalid choice.");
-            }
-        }
+				switch (choice) {
+					case 1:
+						createProject();
+						break;
+					case 2:
+						deleteProject();
+						break;
+					case 3:
+						displayAllProjects();
+						break;
+					case 4:
+						displayProjectById();
+						break;
+					case 5:
+						updateProject();
+						break;
+					case 6:
+						deleteProject();
+						break;
+					case 7:
+						displayEmployeesInProject();
+						break;
+					case 8:
+						return;
+					default:
+						System.out.println("Invalid choice.");
+				}
+			}
+		} catch (InputMismatchException e) {
+			logger.error("Please Enter a Valid Option (Numeric only)");
+		}
     }
 
     /**
@@ -85,12 +93,12 @@ public class ProjectController {
             String name = scanner.nextLine();
 
             projectService.addProject(idCounter, name);
-            System.out.println("Project added successfully.");
+            logger.info("Project added successfully.");
             idCounter++;
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         } catch (DatabaseException e) {
-            System.out.println("Unable to add project" + e);
+            logger.error("Unable to add project" + e);
         }
     }
 
@@ -106,11 +114,11 @@ public class ProjectController {
             int id = scanner.nextInt();
             scanner.nextLine();
             projectService.removeProject(id);
-            System.out.println("Project deleted successfully.");
+            logger.info("Project deleted successfully.");
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         } catch (DatabaseException e) {
-            System.out.println("Unable to delete project" + e);
+            logger.error("Unable to delete project" + e);
         }
     }
 
@@ -128,7 +136,7 @@ public class ProjectController {
             projectService.getAllProjects().forEach(System.out::println);
             System.out.println("------------------------------------");
         } catch (DatabaseException e) {
-            System.out.println("No projects to display" + e);
+            logger.error("No projects to display" + e);
         }
     }
  
@@ -153,9 +161,9 @@ public class ProjectController {
                 System.out.println("Project not found." +id);
             }
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         } catch (DatabaseException e) {
-            System.out.println("Unable to show that project" + e);
+            logger.error("Unable to show that project" + e);
         }
     }
 
@@ -177,11 +185,11 @@ public class ProjectController {
             String name = scanner.nextLine();
 
             projectService.updateProject(id, name);
-            System.out.println("Project updated successfully.");
+            logger.info("Project updated successfully.");
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         } catch (DatabaseException e) {
-            System.out.println("Unable to update project" + e);
+            logger.error("Unable to update project" + e);
         }
     }
 
@@ -218,9 +226,9 @@ public class ProjectController {
                 
              }
          } catch(IllegalArgumentException e){
-              System.out.println(e.getMessage());
+              logger.error(e.getMessage());
         } catch (DatabaseException e) {
-            System.out.println("No employees found in this project" + e);
+            logger.error("No employees found in this project" + e);
         }
     }
 }

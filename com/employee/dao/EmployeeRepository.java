@@ -13,8 +13,7 @@ import java.time.LocalDate;
 
 import com.model.Employee;
 import com.employee.service.EmployeeService;
-import exception.DatabaseException;
-import utils.DatabaseConnection;
+import com.exception.DatabaseException;
 
 public interface EmployeeRepository {
     /**

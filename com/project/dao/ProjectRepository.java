@@ -1,22 +1,16 @@
 package com.project.dao;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
 
 import com.model.Project;
 import com.model.Employee;
 import com.model.Department;
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 //import com.employee.dao.EmployeerepositoryImpl;
-import utils.DatabaseConnection;
+//import com.utils.DatabaseConnection;
 
 public interface ProjectRepository {
     /**

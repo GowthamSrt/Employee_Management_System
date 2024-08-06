@@ -13,9 +13,8 @@ import org.hibernate.cfg.Configuration;
 import com.model.Employee;
 import com.model.Department;
 import com.model.Project;
-import exception.DatabaseException;
-import utils.DatabaseConnection;
-import utils.HibernateConnection;
+import com.exception.DatabaseException;
+import com.utils.HibernateConnection;
 
 /**
 * <p> 

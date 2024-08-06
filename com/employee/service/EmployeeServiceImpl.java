@@ -12,7 +12,7 @@ import com.model.Employee;
 import com.model.Project;
 import com.project.service.ProjectService;
 import com.project.service.ProjectServiceImpl;
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 
 
 
@@ -43,7 +43,6 @@ public class EmployeeServiceImpl implements EmployeeService {
                             throws IllegalArgumentException, DatabaseException {
         try {
             Department department = departmentService.getDepartmentById(deptId);
-			System.out.println("name" + department.getName());
             Employee employee = new Employee(id, name, dob, department, emailId, mobile); 
             employeeRepository.addEmployee(employee);
         } catch (IllegalArgumentException e) {

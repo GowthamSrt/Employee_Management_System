@@ -3,7 +3,7 @@ package com.department.dao;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
-import utils.DatabaseConnection;
+
 
 import org.hibernate.HibernateException; 
 import org.hibernate.Session; 
@@ -15,8 +15,8 @@ import org.hibernate.cfg.Configuration;
 
 import com.model.Department;
 import com.model.Employee;
-import exception.DatabaseException;
-import utils.HibernateConnection;
+import com.exception.DatabaseException;
+import com.utils.HibernateConnection;
 
 
 /**
@@ -50,7 +50,6 @@ public class DepartmentRepositoryImpl implements DepartmentRepository  {
         }
      }
 
-
     /**
     * <p>
     * hanldes the updation of department by checking whether department already
@@ -78,7 +77,6 @@ public class DepartmentRepositoryImpl implements DepartmentRepository  {
         }
     }
 
-
      /**
     * <p>
     * method deletes the department from the database by getting Id from user
@@ -101,7 +99,7 @@ public class DepartmentRepositoryImpl implements DepartmentRepository  {
              if(transaction != null) {
                 transaction.rollback();
             }
-             throw new DatabaseException("Error while deleting department  " + id+ "  " + e);
+             throw new DatabaseException("Error while deleting department  " + id + "  " + e);
              
          } finally {
              session.close();
@@ -182,9 +180,6 @@ public class DepartmentRepositoryImpl implements DepartmentRepository  {
         } finally {
             session.close();
         }
-
         return employees;
     }
-
-
 }

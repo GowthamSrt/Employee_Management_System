@@ -7,7 +7,7 @@ import com.department.service.DepartmentServiceImpl;
 import com.model.Department;
 import com.model.Employee;
 import com.employee.service.EmployeeService;
-import exception.DatabaseException;
+import com.exception.DatabaseException;
 
 /**
  *<p>
@@ -54,6 +54,10 @@ public interface DepartmentService {
      */
     public void updateDepartment(int id, String name) throws IllegalArgumentException, DatabaseException;
     
+	/**
+     * Retrieves all employees from a specific departemnt.
+     * @return A List of all employees in a department.
+     */ 
     public List<Employee> getEmployeesByDepartmentId(int id) throws DatabaseException;
 
 }

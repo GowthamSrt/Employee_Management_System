@@ -1,0 +1,39 @@
+[INFO ] 2024-08-06 11:40:11.037 [main] Version - HHH000412: Hibernate ORM core version 5.6.0.Final
+[INFO ] 2024-08-06 11:40:11.524 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 11:40:11.662 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 11:40:11.674 [main] pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/employee_management]
+[INFO ] 2024-08-06 11:40:11.675 [main] pooling - HHH10001001: Connection properties: {user=root}
+[INFO ] 2024-08-06 11:40:11.675 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 11:40:11.678 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 11:40:11.931 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ] 2024-08-06 11:40:12.643 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@15d0d6c9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 12:36:53.164 [main] Version - HHH000412: Hibernate ORM core version 5.6.0.Final
+[INFO ] 2024-08-06 12:36:53.631 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 12:36:53.772 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 12:36:53.782 [main] pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/employee_management]
+[INFO ] 2024-08-06 12:36:53.783 [main] pooling - HHH10001001: Connection properties: {user=root}
+[INFO ] 2024-08-06 12:36:53.783 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 12:36:53.787 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 12:36:54.003 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ] 2024-08-06 12:36:54.776 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4130a648] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 12:38:12.433 [main] EmployeeController - Employee added successfully.
+[WARN ] 2024-08-06 12:48:31.508 [main] ProjectController - Please Enter a Valid Option (Numeric only)
+[INFO ] 2024-08-06 13:03:56.694 [main] Version - HHH000412: Hibernate ORM core version 5.6.0.Final
+[INFO ] 2024-08-06 13:03:57.115 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 13:03:57.258 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:03:57.270 [main] pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/employee_management]
+[INFO ] 2024-08-06 13:03:57.270 [main] pooling - HHH10001001: Connection properties: {user=root}
+[INFO ] 2024-08-06 13:03:57.271 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:03:57.277 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:03:57.531 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ] 2024-08-06 13:03:58.257 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4130a648] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 13:12:54.191 [main] Version - HHH000412: Hibernate ORM core version 5.6.0.Final
+[INFO ] 2024-08-06 13:12:54.617 [main] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[WARN ] 2024-08-06 13:12:54.762 [main] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2024-08-06 13:12:54.771 [main] pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/employee_management]
+[INFO ] 2024-08-06 13:12:54.773 [main] pooling - HHH10001001: Connection properties: {user=root}
+[INFO ] 2024-08-06 13:12:54.774 [main] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2024-08-06 13:12:54.777 [main] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2024-08-06 13:12:54.998 [main] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO ] 2024-08-06 13:12:55.757 [main] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4130a648] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2024-08-06 13:12:56.057 [main] ProjectController - Project added successfully.
